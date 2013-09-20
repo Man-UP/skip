@@ -1,0 +1,32 @@
+<head>
+  <title>Skipping</title>
+</head>
+
+<body></body>
+
+<template name="layout">
+  {{yield}}
+</template>
+
+<template name="player">
+  <h1>Skipping</h1>
+  {{#if isAlive}}
+    {{> controller}}
+  {{else}}
+    {{> gameOver}}
+  {{/if}}
+</template>
+
+<template name="controller">
+  Lives: {{player.lives}}
+  <input type="button" value="Jump"/>
+</template>
+
+<template name="gameOver">
+  Game over!
+</template>
+
+<template name="viewer">
+  <canvas id="view"/>
+</template>
+
